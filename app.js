@@ -22,7 +22,7 @@ app.use(helmet());
 // app.use(cors({ origin: true, credentials: true }));
 app.options('*', cors({ origin: true, credentials: true }));
 const corsOptions = {
-  origin: 'http://localhost:5173', // <-- frontend origin
+  origin: 'https://johri.netlify.app/', // <-- frontend origin
   credentials: true
 };
 app.use(cors(corsOptions));
