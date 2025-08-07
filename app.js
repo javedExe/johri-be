@@ -43,8 +43,8 @@ app.use(session({
   saveUninitialized: false,
   cookie: {
     maxAge: +process.env.SESSION_IDLE_MS || 86400000,
-    secure: false,
-    sameSite: 'lax'
+    secure: true,     // for dev false
+    sameSite: 'none' // for dev "lax"
   }
 }));
 
