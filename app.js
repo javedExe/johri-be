@@ -33,6 +33,9 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use(rateLimiter);
 
+
+app.set('trust proxy', 1);
+
 /* ────── Session store ────── */
 app.use(session({
   store: new PgStore({
