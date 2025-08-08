@@ -22,7 +22,8 @@ app.use(helmet());
 // app.use(cors({ origin: true, credentials: true }));
 app.options('*', cors({ origin: true, credentials: true }));
 const corsOptions = {
-  origin: 'https://johri.netlify.app', // <-- frontend origin
+  // origin: 'https://johri.netlify.app', // <-- frontend origin
+  origin: 'https://johri-fe.onrender.com', // <-- frontend origin
   credentials: true
 };
 app.use(cors(corsOptions));
