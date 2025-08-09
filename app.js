@@ -48,7 +48,8 @@ app.use(session({
   cookie: {
     maxAge: +process.env.SESSION_IDLE_MS || 86400000,
     secure: true,     // for dev false
-    sameSite: 'none' // for dev "lax"
+    sameSite: 'none', // for dev "lax"
+    domain: '.onrender.com'
   }
 }));
 
